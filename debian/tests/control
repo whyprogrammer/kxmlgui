@@ -1,0 +1,9 @@
+Tests: testsuite
+Depends: @, @builddeps@, build-essential,
+         xvfb, xauth, dbus (>= 1.8), openbox,
+         libkf5globalaccel-bin
+Restrictions: build-needed, allow-stderr
+
+Tests: acc
+Depends: @, dh-acc, exuberant-ctags
+Restrictions: allow-stderr

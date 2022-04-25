@@ -1,0 +1,107 @@
+Source: kxmlgui
+Section: libs
+Priority: optional
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Maximiliano Curia <maxy@debian.org>
+Build-Depends: cmake (>= 3.0~),
+               debhelper (>= 11~),
+               doxygen,
+               extra-cmake-modules (>= 5.68.0~),
+               graphviz,
+               libkf5attica-dev (>= 5.68.0~),
+               libkf5config-dev (>= 5.68.0~),
+               libkf5configwidgets-dev (>= 5.68.0~),
+               libkf5coreaddons-dev (>= 5.68.0~),
+               libkf5globalaccel-dev (>= 5.68.0~),
+               libkf5i18n-dev (>= 5.68.0~),
+               libkf5iconthemes-dev (>= 5.68.0~),
+               libkf5itemviews-dev (>= 5.68.0~),
+               libkf5textwidgets-dev (>= 5.68.0~),
+               libkf5widgetsaddons-dev (>= 5.68.0~),
+               libkf5windowsystem-dev (>= 5.68.0~),
+               libqt5sql5-sqlite,
+               libqt5x11extras5-dev (>= 5.6.1~),
+               pkg-kde-tools (>= 0.15.15ubuntu0),
+               qtbase5-dev (>= 5.8.0~),
+               qtbase5-private-dev (>= 5.7.0~),
+               qttools5-dev,
+               qttools5-dev-tools (>= 5.4),
+Standards-Version: 4.1.4
+Homepage: https://projects.kde.org/projects/frameworks/kxmlgui
+Vcs-Browser: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/kxmlgui
+Vcs-Git: https://git.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/kxmlgui
+
+Package: libkf5xmlgui-bin
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: User configurable main windows.
+ framework for designing the user interface
+ of an application using XML, using the idea
+ of actions.
+ .
+ This package contains the runtime files.
+
+Package: libkf5xmlgui-data
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: User configurable main windows.
+ framework for designing the user interface
+ of an application using XML, using the idea
+ of actions.
+ .
+ This package contains the data files.
+
+Package: libkf5xmlgui-dev
+Architecture: any
+Section: libdevel
+Depends: libkf5attica-dev (>= 5.68.0~),
+         libkf5config-dev (>= 5.68.0~),
+         libkf5configwidgets-dev (>= 5.68.0~),
+         libkf5globalaccel-dev (>= 5.68.0~),
+         libkf5iconthemes-dev (>= 5.68.0~),
+         libkf5itemviews-dev (>= 5.68.0~),
+         libkf5textwidgets-dev (>= 5.68.0~),
+         libkf5windowsystem-dev (>= 5.68.0~),
+         libkf5xmlgui5 (= ${binary:Version}),
+         qtbase5-dev (>= 5.8.0~),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: libkf5xmlgui-doc (= ${source:Version})
+Breaks: kio-dev (<< 5.28)
+Description: User configurable main windows.
+ framework for designing the user interface
+ of an application using XML, using the idea
+ of actions.
+ .
+ Contains development files for kxmlgui.
+
+Package: libkf5xmlgui-doc
+Architecture: all
+Multi-Arch: foreign
+Section: doc
+Depends: ${misc:Depends}
+Description: User configurable main windows (documentation)
+ framework for designing the user interface
+ of an application using XML, using the idea
+ of actions.
+ .
+ This package contains the qch documentation files.
+
+Package: libkf5xmlgui5
+Architecture: any
+Multi-Arch: same
+Depends: libkf5xmlgui-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Recommends: libkf5xmlgui-bin (= ${binary:Version})
+Breaks: frameworkintegration (<< 5.28),
+        kross (<< 5.42),
+        ktexteditor-katepart (<< 5.42),
+        libkf5kdelibs4support5-bin (<< 5.42),
+        libkf5plasmaquick5 (<< 5.42),
+        libkf5webkit5 (<< 5.42),
+Description: User configurable main windows.
+ framework for designing the user interface
+ of an application using XML, using the idea
+ of actions.
