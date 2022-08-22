@@ -1,7 +1,7 @@
 Source: kxmlgui
 Section: libs
 Priority: optional
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Maintainer: Openkylin Developers <packaging@lists.openkylin.top>
 XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Norbert Preining <norbert@preining.info>
 Build-Depends: cmake (>= 3.16~),

@@ -1,3 +1,9 @@
+kxmlgui (5.92.0-ok2) yangtze; urgency=medium
+
+  * update version info
+
+ -- luzhiping <luzhiping@kylinos.cn>  Mon, 22 Aug 2022 14:01:01 +0800
+
 kxmlgui (5.92.0-ok1) yangtze; urgency=medium
 
   * Build for openKylin.
